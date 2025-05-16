@@ -1,19 +1,19 @@
 version: "3.8"
 
 services:
-  # frontend:
-  #   build:
-  #     context: ./frontend
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "3014:3014"
-  #   volumes:
-  #     - ./frontend:/app
-  #     - /app/node_modules
-  #   env_file:
-  #     - ./frontend/.env
-  #   depends_on:
-  #     - backend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3014:3014"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    env_file:
+      - ./frontend/.env
+    depends_on:
+      - backend
 
   backend:
     build:
